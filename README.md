@@ -13,7 +13,7 @@ Just add an executable shell script called `docker-credential-ecr-login` into yo
       -i \
       --rm \
       -v /etc/ssl/certs:/etc/ssl/certs \
-      redbadger/docker-credential-ecr-login $1
+      mozgiii/docker-credential-ecr-login $1
     ```
 
 1. If you are using environment variables:
@@ -27,7 +27,7 @@ Just add an executable shell script called `docker-credential-ecr-login` into yo
       -e AWS_SECRET_ACCESS_KEY \
       -e AWS_SESSION_TOKEN \
       -v /etc/ssl/certs:/etc/ssl/certs \
-      redbadger/docker-credential-ecr-login $1
+      mozgiii/docker-credential-ecr-login $1
     ```
 
 1. If you are AWS credentials:
@@ -39,7 +39,7 @@ Just add an executable shell script called `docker-credential-ecr-login` into yo
       --rm \
       -v /etc/ssl/certs:/etc/ssl/certs \
       -v $HOME/.aws/credentials:/root/.aws/credentials \
-      redbadger/docker-credential-ecr-login $1
+      mozgiii/docker-credential-ecr-login $1
     ```
 
 Then modify `~/.docker/config.json` to let Docker know to use the helper (substituting your AWS account and region):
